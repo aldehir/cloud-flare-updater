@@ -1,0 +1,2 @@
+defmodule CloudFlareUpdater do
+end
