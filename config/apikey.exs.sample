@@ -1,0 +1,5 @@
+use Mix.Config
+
+config :cloud_flare_updater, auth_email: ""
+config :cloud_flare_updater, auth_key: ""
+
