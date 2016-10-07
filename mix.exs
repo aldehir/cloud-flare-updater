@@ -3,6 +3,7 @@ defmodule CloudFlareUpdater.Mixfile do
 
   def project do
     [app: :cloud_flare_updater,
+     escript: escript_config,
      version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -28,6 +29,12 @@ defmodule CloudFlareUpdater.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:httpoison, "~> 0.9.0"},
-     {:poison, "~> 2.0"}]
+     {:poison, "~> 2.0"},
+     {:floki, "~> 0.10.0"}]
+  end
+
+  defp escript_config do
+    [ main_module: CloudFlareUpdater.CLI,
+      emu_args: "-detached" ]
   end
 end
