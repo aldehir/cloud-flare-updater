@@ -1,4 +1,5 @@
 # CloudFlareUpdater
 
-Periodically updates a DNS record through CloudFlare's REST API to the IP
-assigned to my router.
+CloudFlare Updater is a simple program that periodically retrieves my router's
+latest assigned IP address from the router's web server and updates a given DNS
+record through CloudFlare's REST API.
